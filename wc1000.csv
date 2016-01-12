@@ -1,0 +1,4 @@
+time,interface,subconfig,txtBandwidth
+0,eth1,1,1024
+30,eth1,1,10240
+30,eth1,1,0

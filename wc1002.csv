@@ -1,0 +1,5 @@
+time,interface,subconfig,txtLoss,txtDelay,txtDelayJitter,txtBandwidth
+0,eth0,1,0,0,0,0
+10,eth0,1,,,,1000
+20,eth0,1,,,,1000000
+30,eth0,1,0,0,0,0

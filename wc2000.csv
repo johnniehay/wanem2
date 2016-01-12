@@ -1,0 +1,4 @@
+time,interface,subconfig,txtLoss,txtDelay,txtDelayJitter,txtBandwidth
+0,eth0,1,0,0,0,0
+5,command,ssh 10.154.32.104 '~/Downloads/iperf -c 10.154.32.150 -i1' &,,,,
+10,eth0,1,,,,800000

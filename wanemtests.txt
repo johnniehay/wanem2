@@ -1,0 +1,189 @@
+[  4]  0.0-10.0 sec   423 MBytes   354 Mbits/sec	// no conf
+[  4]  0.0-10.1 sec   114 MBytes  94.8 Mbits/sec	// 102400Kbits/s (100Mbits/s) bandwidth
+[  4]  0.0-10.0 sec   416 MBytes   348 Mbits/sec	// 10ms delay
+[  4]  0.0-10.1 sec  77.7 MBytes  64.8 Mbits/sec	// 100ms delay
+
+[ ID]   Interval        Transfer     Bandwidth      Jitter   Lost/Total      Out-of-order
+[  3]  0.0-10.0 sec    119 MBytes  99.9 Mbits/sec  0.009 ms    0/84935 (0%)       1			// udp 100Mbits/sec 
+[  3]  0.0-10.0 sec    118 MBytes  99.0 Mbits/sec  0.019 ms  873/85074 (1%)       1			// udp 100M 1% loss
+[  3]  0.0-10.0 sec    119 MBytes  99.6 Mbits/sec  3.469 ms   27/84629 (0.032%)   73422		// udp 100M delay 10ms jitter 5ms
+[  3]  0.0-10.0 sec    120 MBytes    101 Mbits/sec  0.005 ms    0/85134 (0%)      796		// udp 100M duplicates 1%
+[  3]  0.0-10.0 sec    118 MBytes  99.2 Mbits/sec  0.003 ms  840/85198 (0.99%)    1			// udp 100M corruption 1%
+
+Dynamic tests
+
+0 eth0 delay=0
+5 eth0 delay=10
+10 eth0 delay=100
+15 eth0 delay=0
+
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 0.5 sec  19.3 MBytes    323 Mbits/sec
+[  3]  0.5- 1.0 sec  20.5 MBytes    344 Mbits/sec
+[  3]  1.0- 1.5 sec  19.8 MBytes    332 Mbits/sec
+[  3]  1.5- 2.0 sec  19.7 MBytes    330 Mbits/sec
+[  3]  2.0- 2.5 sec  19.6 MBytes    329 Mbits/sec
+[  3]  2.5- 3.0 sec  12.5 MBytes    209 Mbits/sec
+[  3]  3.0- 3.5 sec  19.9 MBytes    334 Mbits/sec
+[  3]  3.5- 4.0 sec  20.1 MBytes    338 Mbits/sec
+[  3]  4.0- 4.5 sec  19.9 MBytes    333 Mbits/sec
+[  3]  4.5- 5.0 sec  21.8 MBytes    366 Mbits/sec
+[  3]  5.0- 5.5 sec  20.7 MBytes    347 Mbits/sec
+[  3]  5.5- 6.0 sec  20.0 MBytes    336 Mbits/sec
+[  3]  6.0- 6.5 sec  17.4 MBytes    291 Mbits/sec
+[  3]  6.5- 7.0 sec  19.4 MBytes    326 Mbits/sec
+[  3]  7.0- 7.5 sec  10.5 MBytes    176 Mbits/sec
+[  3]  7.5- 8.0 sec    384 KBytes  6.29 Mbits/sec				// delay 10 ms
+[  3]  8.0- 8.5 sec  1.12 MBytes  18.7 Mbits/sec
+[  3]  8.5- 9.0 sec  1.30 MBytes  21.9 Mbits/sec
+[  3]  9.0- 9.5 sec  1.68 MBytes  28.2 Mbits/sec
+[  3]  9.5-10.0 sec  1.86 MBytes  31.2 Mbits/sec
+[  3] 10.0-10.5 sec  2.05 MBytes  34.5 Mbits/sec
+[  3] 10.5-11.0 sec  2.36 MBytes  39.6 Mbits/sec
+[  3] 11.0-11.5 sec  2.86 MBytes  48.0 Mbits/sec
+[  3] 11.5-12.0 sec  2.73 MBytes  45.9 Mbits/sec
+[  3] 12.0-12.5 sec  1.49 MBytes  25.0 Mbits/sec
+[  3] 12.5-13.0 sec  0.00 Bytes  0.00 bits/sec					// delay 100 ms
+[  3] 13.0-13.5 sec    192 KBytes  3.15 Mbits/sec
+[  3] 13.5-14.0 sec    192 KBytes  3.15 Mbits/sec
+[  3] 14.0-14.5 sec    376 KBytes  6.16 Mbits/sec
+[  3] 14.5-15.0 sec    192 KBytes  3.15 Mbits/sec
+[  3] 15.0-15.5 sec    192 KBytes  3.15 Mbits/sec
+[  3] 15.5-16.0 sec    192 KBytes  3.15 Mbits/sec
+[  3] 16.0-16.5 sec    192 KBytes  3.15 Mbits/sec
+[  3] 16.5-17.0 sec    440 KBytes  7.21 Mbits/sec
+[  3] 17.0-17.5 sec    256 KBytes  4.19 Mbits/sec
+[  3] 17.5-18.0 sec  12.5 MBytes    210 Mbits/sec				// delay 0
+[  3] 18.0-18.5 sec  1.34 MBytes  22.5 Mbits/sec
+[  3] 18.5-19.0 sec  15.9 MBytes    267 Mbits/sec
+[  3] 19.0-19.5 sec  14.5 MBytes    244 Mbits/sec
+[  3] 19.5-20.0 sec  16.5 MBytes    276 Mbits/sec
+[  3] 20.0-20.5 sec  15.9 MBytes    267 Mbits/sec
+[  3] 20.5-21.0 sec  16.2 MBytes    271 Mbits/sec
+[  3] 21.0-21.5 sec  16.3 MBytes    274 Mbits/sec
+[  3] 21.5-22.0 sec  18.8 MBytes    315 Mbits/sec
+[  3] 22.0-22.5 sec  15.6 MBytes    261 Mbits/sec
+[  3] 22.5-23.0 sec  16.1 MBytes    270 Mbits/sec
+[  3] 23.0-23.5 sec  15.6 MBytes    262 Mbits/sec
+[  3] 23.5-24.0 sec  16.1 MBytes    270 Mbits/sec
+[  3] 24.0-24.5 sec  15.9 MBytes    267 Mbits/sec
+[  3] 24.5-25.0 sec  16.1 MBytes    271 Mbits/sec
+[  3]  0.0-25.0 sec    524 MBytes    176 Mbits/sec
+
+0 eth0 loss=0
+5 eth0 loss=1
+10 eth0 loss=10
+15 eth0 loss=0
+UDP
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  3]  0.0- 1.0 sec  12.0 MBytes   100 Mbits/sec   0.011 ms    0/ 8537 (0%)
+[  3]  1.0- 2.0 sec  12.0 MBytes   100 Mbits/sec   0.013 ms    0/ 8527 (0%)
+[  3]  2.0- 3.0 sec  11.3 MBytes  94.8 Mbits/sec   0.012 ms   44/ 8109 (0.54%)
+[  3]  3.0- 4.0 sec  12.0 MBytes   100 Mbits/sec   0.010 ms    0/ 8526 (0%)
+[  3]  4.0- 5.0 sec  11.9 MBytes  99.8 Mbits/sec   0.212 ms    0/ 8489 (0%)
+[  3]  5.0- 6.0 sec  12.0 MBytes   101 Mbits/sec   0.012 ms    0/ 8570 (0%)
+[  3]  6.0- 7.0 sec  11.7 MBytes  98.5 Mbits/sec   0.015 ms    0/ 8377 (0%)
+[  3]  7.0- 8.0 sec  11.2 MBytes  93.8 Mbits/sec   0.057 ms   79/ 8051 (0.98%)			// loss 1%
+[  3]  8.0- 9.0 sec  11.8 MBytes  99.0 Mbits/sec   0.006 ms   85/ 8502 (1%)
+[  3]  9.0-10.0 sec  11.4 MBytes  96.0 Mbits/sec   0.096 ms   81/ 8244 (0.98%)
+[  3] 10.0-11.0 sec  11.8 MBytes  99.0 Mbits/sec   0.009 ms   95/ 8512 (1.1%)
+[  3] 11.0-12.0 sec  11.6 MBytes  97.5 Mbits/sec   0.060 ms   86/ 8379 (1%)
+[  3] 12.0-13.0 sec  10.6 MBytes  89.0 Mbits/sec   0.008 ms  839/ 8407 (10%)			// loss 10%
+[  3] 13.0-14.0 sec  10.8 MBytes  90.2 Mbits/sec   0.007 ms  867/ 8541 (10%)
+[  3] 14.0-15.0 sec  10.7 MBytes  90.2 Mbits/sec   0.009 ms  876/ 8542 (10%)
+[  3] 15.0-16.0 sec  10.8 MBytes  90.6 Mbits/sec   0.008 ms  828/ 8532 (9.7%)
+[  3] 16.0-17.0 sec  10.7 MBytes  89.5 Mbits/sec   0.019 ms  815/ 8426 (9.7%)
+[  3] 17.0-18.0 sec  11.5 MBytes  96.4 Mbits/sec   0.015 ms   12/ 8206 (0.15%)			// loss 0%
+[  3] 18.0-19.0 sec  12.0 MBytes   100 Mbits/sec   0.005 ms    0/ 8539 (0%)
+[  3] 19.0-20.0 sec  12.0 MBytes   100 Mbits/sec   0.017 ms    0/ 8533 (0%)
+[  3] 20.0-21.0 sec  12.0 MBytes   100 Mbits/sec   0.012 ms    0/ 8538 (0%)
+[  3] 21.0-22.0 sec  12.0 MBytes   100 Mbits/sec   0.007 ms    0/ 8541 (0%)
+[  3] 22.0-23.0 sec  12.0 MBytes   100 Mbits/sec   0.016 ms    0/ 8539 (0%)
+[  3] 23.0-24.0 sec  11.9 MBytes  99.9 Mbits/sec   0.092 ms    0/ 8497 (0%)
+[  3]  0.0-25.0 sec   290 MBytes  97.1 Mbits/sec   0.011 ms 4706/211227 (2.2%)
+TCP
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 0.5 sec    408 KBytes  6.68 Mbits/sec			// loss 10%
+[  3]  0.5- 1.0 sec  0.00 Bytes  0.00 bits/sec
+[  3]  1.0- 1.5 sec  80.0 KBytes  1.31 Mbits/sec
+[  3]  1.5- 2.0 sec  0.00 Bytes  0.00 bits/sec
+[  3]  2.0- 2.5 sec  80.0 KBytes  1.31 Mbits/sec
+[  3]  2.5- 3.0 sec  0.00 Bytes  0.00 bits/sec
+[  3]  3.0- 3.5 sec  0.00 Bytes  0.00 bits/sec				// loss 0%
+[  3]  3.5- 4.0 sec  16.1 MBytes    271 Mbits/sec
+[  3]  4.0- 4.5 sec  20.1 MBytes    337 Mbits/sec
+[  3]  4.5- 5.0 sec  20.5 MBytes    344 Mbits/sec
+[  3]  5.0- 5.5 sec  15.5 MBytes    261 Mbits/sec
+[  3]  5.5- 6.0 sec  20.9 MBytes    351 Mbits/sec
+[  3]  6.0- 6.5 sec  20.7 MBytes    347 Mbits/sec
+[  3]  6.5- 7.0 sec  21.2 MBytes    357 Mbits/sec
+[  3]  7.0- 7.5 sec  21.5 MBytes    360 Mbits/sec
+[  3]  7.5- 8.0 sec  20.9 MBytes    350 Mbits/sec
+[  3]  8.0- 8.5 sec  7.94 MBytes    133 Mbits/sec
+[  3]  8.5- 9.0 sec  1.58 MBytes  26.5 Mbits/sec			// loss 1%
+[  3]  9.0- 9.5 sec  2.44 MBytes  40.9 Mbits/sec
+[  3]  9.5-10.0 sec  6.55 MBytes    110 Mbits/sec
+[  3] 10.0-10.5 sec  7.37 MBytes    124 Mbits/sec
+[  3] 10.5-11.0 sec  4.38 MBytes  73.5 Mbits/sec
+[  3] 11.0-11.5 sec  3.45 MBytes  57.9 Mbits/sec
+[  3] 11.5-12.0 sec  8.52 MBytes    143 Mbits/sec
+[  3] 12.0-12.5 sec  3.72 MBytes  62.4 Mbits/sec
+[  3] 12.5-13.0 sec  6.14 MBytes    103 Mbits/sec
+[  3] 13.0-13.5 sec  1.10 MBytes  18.5 Mbits/sec
+[  3] 13.5-14.0 sec  0.00 Bytes  0.00 bits/sec				// loss 10% 
+[  3] 14.0-14.5 sec  0.00 Bytes  0.00 bits/sec
+[  3] 14.5-15.0 sec    256 KBytes  4.19 Mbits/sec
+[  3] 15.0-15.5 sec    128 KBytes  2.10 Mbits/sec
+[  3] 15.5-16.0 sec  0.00 Bytes  0.00 bits/sec
+[  3] 16.0-16.5 sec  0.00 Bytes  0.00 bits/sec
+[  3] 16.5-17.0 sec  0.00 Bytes  0.00 bits/sec
+[  3] 17.0-17.5 sec  0.00 Bytes  0.00 bits/sec
+[  3] 17.5-18.0 sec  0.00 Bytes  0.00 bits/sec
+[  3] 18.0-18.5 sec  1.77 MBytes  29.8 Mbits/sec			// loss 0%
+[  3] 18.5-19.0 sec  8.70 MBytes    146 Mbits/sec
+[  3] 19.0-19.5 sec  16.7 MBytes    281 Mbits/sec
+[  3] 19.5-20.0 sec  15.6 MBytes    262 Mbits/sec
+[  3] 20.0-20.5 sec  22.1 MBytes    371 Mbits/sec
+[  3] 20.5-21.0 sec  18.1 MBytes    304 Mbits/sec
+[  3] 21.0-21.5 sec  21.6 MBytes    363 Mbits/sec
+[  3] 21.5-22.0 sec  22.1 MBytes    370 Mbits/sec
+[  3] 22.0-22.5 sec  20.5 MBytes    344 Mbits/sec
+[  3] 22.5-23.0 sec  21.7 MBytes    364 Mbits/sec
+[  3] 23.0-23.5 sec  20.8 MBytes    349 Mbits/sec
+[  3] 23.5-24.0 sec  22.0 MBytes    369 Mbits/sec
+[  3] 24.0-24.5 sec  20.2 MBytes    340 Mbits/sec
+[  3] 24.5-25.0 sec  21.1 MBytes    354 Mbits/sec
+[  3]  0.0-25.0 sec    485 MBytes    163 Mbits/sec
+
+0 eth0 loss=0;delay=0
+5 eth0 loss=1;delay=100
+15 eth0 loss=10;delay=10
+30 eth0 loss=0;delay=0
+TCP
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0- 1.0 sec  39.8 MBytes   334 Mbits/sec
+[  4]  1.0- 2.0 sec  25.7 MBytes   215 Mbits/sec
+[  4]  2.0- 3.0 sec  35.2 MBytes   295 Mbits/sec
+[  4]  3.0- 4.0 sec  44.5 MBytes   373 Mbits/sec
+[  4]  4.0- 5.0 sec  42.1 MBytes   353 Mbits/sec
+[  4]  5.0- 6.0 sec  20.1 MBytes   169 Mbits/sec		// loss=1;delay=100
+[  4]  6.0- 7.0 sec   115 KBytes   938 Kbits/sec
+[  4]  7.0- 8.0 sec   154 KBytes  1.26 Mbits/sec
+[  4]  8.0- 9.0 sec   117 KBytes   961 Kbits/sec
+[  4]  9.0-10.0 sec   157 KBytes  1.29 Mbits/sec
+[  4] 10.0-11.0 sec   205 KBytes  1.68 Mbits/sec
+[  4] 11.0-12.0 sec   279 KBytes  2.28 Mbits/sec
+[  4] 12.0-13.0 sec   307 KBytes  2.51 Mbits/sec
+[  4] 13.0-14.0 sec   199 KBytes  1.63 Mbits/sec
+[  4] 14.0-15.0 sec  93.3 KBytes   765 Kbits/sec
+[  4] 15.0-16.0 sec  91.9 KBytes   753 Kbits/sec		// loss=10;delay=10
+[  4] 16.0-17.0 sec   147 KBytes  1.20 Mbits/sec
+[  4] 17.0-18.0 sec  83.4 KBytes   683 Kbits/sec
+[  4] 18.0-19.0 sec   194 KBytes  1.59 Mbits/sec
+[  4] 19.0-20.0 sec   110 KBytes   904 Kbits/sec
+[  4] 20.0-21.0 sec   137 KBytes  1.12 Mbits/sec
+[  4] 21.0-22.0 sec  96.2 KBytes   788 Kbits/sec
+[  4] 22.0-23.0 sec   247 KBytes  2.03 Mbits/sec
+[  4] 23.0-24.0 sec  74.9 KBytes   614 Kbits/sec
+[  4] 24.0-25.0 sec   407 KBytes  3.34 Mbits/sec
+[  4]  0.0-26.0 sec   211 MBytes  68.1 Mbits/sec
