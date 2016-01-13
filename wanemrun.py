@@ -8,6 +8,7 @@ starttime = time.time()
 early = 0.2
 if len(sys.argv) != 3:
 	print "Usage: wanemrun serverhostname|serverip inputcsv"
+	sys.exit()
 
 ifile  = open(sys.argv[2], "rb")
 reader = csv.reader(ifile)
