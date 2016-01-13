@@ -14,6 +14,7 @@ dkey = {	"delay" 	:	"txtDelay",
 	}
 if len(sys.argv) != 3:
 	print "Usage: wanemconf inputconf outputcsv"
+	sys.exit()
 	
 with open(sys.argv[1],'rb') as inf:
 	conf = inf.readlines()
