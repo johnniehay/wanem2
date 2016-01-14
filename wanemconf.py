@@ -7,10 +7,26 @@ import re
 import csv
 import sys
 
-dkey = {	"delay" 	:	"txtDelay",
+dkey = {	"packetlimit"	:	"txtLimit",
+	 	"symmetrical"	:	"selSym",
+	 	"bandwidth"	:	"txtBandwidth",
+	 	"delay" 	:	"txtDelay",
 	 	"loss"		:	"txtLoss",
+	 	"duplicate"	:	"txtDup",
+	 	"reorder"	:	"txtReorder",
+	 	"corrupt"	:	"txtCorrupt",
 	 	"jitter"	:	"txtDelayJitter",
-		"bandwidth"	:	"txtBandwidth"
+	 	"losscor"	:	"txtLossCorrelation",
+	 	"duplicatecor"	:	"txtDupCorrelation",
+	 	"reordercor"	:	"txtReorderCorrelation",
+	 	"delaycor" 	:	"txtDelayCorrelation",
+	 	"reordergap"	:	"txtGap",
+	 	"delaydistrib"	:	"selDelayDistribution",
+	 	"src"		:	"txtSrc",
+	 	"srcsub"	:	"txtSrcSub",
+	 	"dest"		:	"txtDest",
+	 	"destsub"	:	"txtDestSub",
+	 	"port"		:	"txtPort"
 	}
 if len(sys.argv) != 3:
 	print "Usage: wanemconf inputconf outputcsv"
